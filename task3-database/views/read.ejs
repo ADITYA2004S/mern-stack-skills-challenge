@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Movie List</title>
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      html,
+      body {
+        background-color: #000;
+        min-height: 100%;
+        margin: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="w-full min-h-screen bg-zinc-900 text-white p-10">
+      <div class="mb-6">
+        <a class="text-blue-500 underline hover:text-blue-400" href="/">Home</a>
+      </div>
+      <h1 class="text-3xl text-white mb-6 text-center">Movie List</h1>
+
+      <% if (movies.length > 0) { %> <% movies.forEach(function(movie) { %>
+      <div class="bg-zinc-800 rounded-lg shadow-lg p-6 mb-6">
+        <h3 class="text-xl font-bold mb-2"><%= movie.title %></h3>
+        <h4 class="text-lg text-gray-400 mb-2">
+          Description: <%= movie.description %>
+        </h4>
+        <h4 class="text-lg text-gray-400 mb-2">
+          Director: <%= movie.director %>
+        </h4>
+        <h4 class="text-lg text-gray-400 mb-2">Year: <%= movie.year %></h4>
+        <h4 class="text-lg text-gray-400 mb-2">Genre: <%= movie.genre %></h4>
+
+        <div class="flex justify-between mt-4">
+          <a
+            href="/edit/<%= movie._id %>"
+            class="text-green-400 underline hover:text-green-300"
+            >Edit Movie Details</a
+          >
+          <a
+            href="/delete/<%= movie._id %>"
+            class="text-red-500 underline hover:text-red-400"
+            >Delete Movie</a
+          >
+        </div>
+      </div>
+      <% }) %> <% } else { %>
+      <p class="text-center text-gray-400">No movies found.</p>
+      <% } %>
+    </div>
+  </body>
+</html>

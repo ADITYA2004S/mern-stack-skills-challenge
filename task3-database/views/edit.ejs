@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <div class="w-full h-full bg-zinc-900 text-white p-10">
+      <!-- Content here -->
+      <div class="nav">
+        <a href="/read">Read Data</a>
+      </div>
+      <h1 class="text-3xl text-white">Update Movie</h1>
+      <form action="/update/<%= movie.id %>" method="post">
+        <input
+          class="px-5 py-3 border-4 border-zinc-800 bg-transparent text-white placeholder-white"
+          type="text"
+          name="title"
+          id=""
+          placeholder="title"
+          value="<%= movie.title %>"
+        />
+        <input
+          class="px-5 py-3 border-4 border-zinc-800 bg-transparent text-white placeholder-white"
+          type="text"
+          name="description"
+          id=""
+          placeholder="description"
+          value="<%= movie.description %>"
+        />
+        <input
+          class="px-5 py-3 border-4 border-zinc-800 bg-transparent text-white placeholder-white"
+          type="text"
+          name="director"
+          id=""
+          placeholder="director"
+          value="<%= movie.director %>"
+        />
+        <input
+          class="px-5 py-3 border-4 border-zinc-800 bg-transparent text-white placeholder-white"
+          type="text"
+          name="year"
+          id=""
+          placeholder="year"
+          value="<%= movie.year %>"
+        />
+        <input
+          class="px-5 py-3 border-4 border-zinc-800 bg-transparent text-white placeholder-white"
+          type="text"
+          name="genre"
+          id=""
+          placeholder="genre"
+          value="<%= movie.genre %>"
+        />
+        <input
+          class="px-5 py-3 border-4 border-zinc-800 bg-transparent text-white placeholder-white"
+          type="submit"
+          value="Update Movie"
+          id=""
+          placeholder="task"
+        />
+      </form>
+    </div>
+  </body>
+</html>
