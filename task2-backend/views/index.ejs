@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <div class="w-full h-full bg-zinc-900 text-white p-10">
+      <!-- Content here -->
+      <div class="nav">
+        <a href="/read">Read Data</a>
+      </div>
+      <h1 class="text-3xl text-white">Create User</h1>
+      <form action="/create" method="post">
+        <input
+          class="px-5 py-3 border-4 border-zinc-800 bg-transparent text-white placeholder-white"
+          type="text"
+          name="name"
+          id=""
+          placeholder="name"
+        />
+        <input
+          class="px-5 py-3 border-4 border-zinc-800 bg-transparent text-white placeholder-white"
+          type="text"
+          name="task"
+          id=""
+          placeholder="task"
+        />
+        <input
+          class="px-5 py-3 border-4 border-zinc-800 bg-transparent text-white placeholder-white"
+          type="submit"
+          value="create user"
+          id=""
+          placeholder="task"
+        />
+      </form>
+    </div>
+  </body>
+</html>
